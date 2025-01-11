@@ -1,0 +1,44 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+env.bak/
+
+# Django migrations (if used with FastAPI)
+migrations/
+
+# Database files
+*.sqlite3
+*.db
+
+# FastAPI specific
+*.log
+*.bak
+
+# IDE configurations
+.idea/
+.vscode/
+
+# Jupyter Notebook files (if applicable)
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.env.* 
+
+# Pytest cache
+.cache/
+
+# Docker related
+Dockerfile
+docker-compose.yml
+.docker/
+
+# FastAPI server logs
+*.log

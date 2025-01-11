@@ -1,8 +1,11 @@
 from fastapi import FastAPI
-from .api import emotion_analysis , health_risk
+from .api.health_risk import predict_health_risk  
+from .services.health_risk import health_risk_model, predict_health_risk
+from .schemas.health_risk import HealthRiskData
 
 app = FastAPI()
 
-app.include_router(health_risk.router)
-app.include_router(emotion_analysis.router)
-
+@app.post('/predict_health_risk')
+async def predict_health_risk_endpoint(data:HealthRiskData):
+    result = predict_health_risk(data)
+    return result 
