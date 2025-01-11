@@ -1,0 +1,6 @@
+# server/requirements.txt
+fastapi
+uvicorn
+transformers
+torch
+pydantic
