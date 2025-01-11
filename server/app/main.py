@@ -1,10 +1,8 @@
 from fastapi import FastAPI
-from pydantic import BaseModel 
-from transformers import pipeline
+from .api import emotion_analysis , health_risk
 
 app = FastAPI()
 
-@app.get('/')
+app.include_router(health_risk.router)
+app.include_router(emotion_analysis.router)
 
-async def root():
-    return {"msg":"Hello Aryan"}
